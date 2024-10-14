@@ -4,7 +4,7 @@ DESCRIPTION
 
 ## Participants 👥
 - BILLARD Mélissa
-- BRACCIALES-COMBAS Lola
+- BRACCIALE-COMBAS Lola
 - CARRILHO LAMEIRA Rita
 - COURTIN Amandine
 
