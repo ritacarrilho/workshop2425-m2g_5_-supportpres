@@ -5,7 +5,7 @@
 - BILLARD Mélissa
 - BRACCIALES-COMBAS Lola
 - CARRILHO LAMEIRA Rita
-- 
+- COURTIN Amandine
 
 ## Technologie 
 - Projet en [Techno](https://fastapi.tiangolo.com/)
