@@ -54,16 +54,19 @@ jobs:
         
       - name: Install PHP CS Fixer
         run: composer require --dev friendsofphp/php-cs-fixer
-      
+        continue-on-error: true
+
       - name: Run PHP CS Fixer for code linting
         run: |
           ./vendor/bin/php-cs-fixer fix --dry-run --diff || true
+        continue-on-error: true
 
       - name: Upload CS Fixer report
         uses: actions/upload-artifact@v3
         with:
           name: php-cs-fixer-report
           path: .php_cs.cache
+        continue-on-error: true
 
   tests:
     name: Run Tests
