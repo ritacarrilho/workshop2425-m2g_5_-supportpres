@@ -1,26 +1,5 @@
-# config/routes.yaml
-
-# the "app_lucky_number" route name is not important yet
-app_lucky_number:
-  path: /lucky/number
-  controller: App\Controller\LuckyController::number
-
-app_new_route:
-  path: /lucky/md5
-  controller: App\Controller\LuckyController::numberMd5
-
-app_home_route:
-  path: /
-  controller: App\Controller\VenteController::venteFuture
-
-app_histo_route:
-  path: /historique-ventes
-  controller: App\Controller\VenteController::ventePasse
-
-app_ventes_route:
-  path: /vente-future/{id}
-  controller: App\Controller\VenteController::detailsVente
-
-app_lot_route:
-  path: /vente-future/{idVente}/lot/{idLot}
-  controller: App\Controller\LotController::detailLot
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
