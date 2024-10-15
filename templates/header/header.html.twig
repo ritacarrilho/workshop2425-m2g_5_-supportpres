@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Parent Watcher{% endblock %}</title>
-        <link rel="icon" href="{{ asset('logo.png') }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+{% include 'base.html.twig' %}
 
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('styles/app.css') }}"/>
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head><!-- Navbar -->
-    <body>
-        <nav class="uk-navbar-container uk-navbar-transparent uk-box-shadow-medium" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/">
-                    <img src="{{ asset('assets/LOGO-NEXTECH-RVB.svg') }}" style="height: 50px; width: auto; margin-left:30px;" />
-                </a>
-            </div>
-            <div class="uk-navbar-right" style="margin-right: 5%">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/" class="uk-text-bold">Accueil</a></li>
-                    <li><a href="/historique-ventes" class="uk-text-bold">Historique</a></li>
-                </ul>
-            </div>
-        </nav>
+<nav class="">
+    <div class="">
+        <a><img href=""> <img src="{{ asset('banner-logo.jpg') }}" alt="twitter"> </a>    
+    </div>
+    <div>
+        <ul>
+            <li><a href="{{ path('app_home') }}">A propos</a></li>
+            <li><a href="{{ path('app_home') }}">Services</a></li>
+            <li><a href="{{ path('app_home') }}">Prix</a></li>
+        </ul>
+        <a href="{{ path('app_home') }}">Se connecter</a>
+    </div>
+</nav>

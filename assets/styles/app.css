@@ -7,6 +7,7 @@
     --dark_blue_green: #4FCFBD;
     --light_yellow: #FFF4E7;
     --dark_grey: #1C1C1C;
+    --light_grey: #696969;
     --light_brown: #F4EDE4;
 }
   
@@ -27,4 +28,8 @@ body {
 a {
     text-decoration: none;
     color: var(--dark_grey);
+}
+
+ul {
+    list-style: none outside none;
 }

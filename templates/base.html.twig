@@ -5,66 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Parent Watcher{% endblock %}</title>
         <link rel="icon" href="{{ asset('logo.png') }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
+            {# Fonts #}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+            {# Bootstrap CSS CDN #}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
             <link rel="stylesheet" type="text/css" href="{{ asset('styles/app.css') }}"/>
         {% endblock %}
-
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>            {{ encore_entry_script_tags('app') }}
         {% endblock %}
-    </head>
+    </head><!-- Navbar -->
     <body>
-        <!-- Navbar -->
-        {# <nav class="uk-navbar-container uk-navbar-transparent uk-box-shadow-medium" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/">
-                    <img src="{{ asset('assets/LOGO-NEXTECH-RVB.svg') }}" style="height: 50px; width: auto; margin-left:30px;" />
-                </a>
-            </div>
-            <div class="uk-navbar-right" style="margin-right: 5%">
-                <ul class="uk-navbar-nav">
-                    <li><a href="/" class="uk-text-bold">Accueil</a></li>
-                    <li><a href="/historique-ventes" class="uk-text-bold">Historique</a></li>
-                </ul>
-            </div>
-        </nav> #}
-
-        {% block body %}{% endblock %}
-
-        {# <!-- Footer -->
-        <footer class="">
-            <div class="">
-                <div class="">
-                    <p>Email me at</p>
-                    <p>contact@website.com</p>
-                </div>
-                <div>
-                    <h3>On en parle !</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna morbi massa dictum tristique convallis pretium eleifend habitant. Libero a arcu purus, elit, volutpat in nunc amet. Fermentum risus vel dolor id scelerisque senectus et, id nunc. Consectetur metus tristique ullamcorper semper purus massa eget urna.</p>
-                    <div class="">
-                        <a href="www.x.com"> <img src="{{ asset('twitter.svg') }}" alt="twitter"></a>
-                        <a href="www.linkedin.com"> <img src="{{ asset('linkedin.svg') }}" alt="linkedin"></a>
-                        <a href="www.instagram.com"> <img src="{{ asset('instagram.svg') }}" alt="instagram"> </a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="">
-                <div class="">                
-                    <a href="{{ path('app_home') }}">A propos</a>
-                    <a href="{{ path('app_home') }}">Services</a>
-                    <a href="{{ path('app_home') }}">Prix</a>
-                    <a href="{{ path('app_home') }}">Contactez nous</a>
-                </div>
-                <div class="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </footer> #}
-    </body>
-</html>
