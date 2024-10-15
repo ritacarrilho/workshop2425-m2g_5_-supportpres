@@ -83,7 +83,9 @@ Le projet **Parent Watch** utilise les `GitHub Actions` pour gérer l'intégrati
 ### 3. Notifications et gestion des résultats :
 
 - **En cas de succès** : Si le pipeline CI/CD réussit, une **release note** est automatiquement créée, et une notification est envoyée dans le **support Discord** pour informer l'équipe du succès du déploiement.
+![](/assets/release-note.png)
 - **En cas d'échec** : Si le pipeline CI/CD échoue, une notification détaillée est envoyée dans le **support Discord** pour alerter l'équipe de l'erreur.
+![](/assets/support.png)
 
 ## Déploiement
 ```php
