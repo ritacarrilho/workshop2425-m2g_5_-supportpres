@@ -97,6 +97,7 @@ Le projet **Parent Watch** utilise les `GitHub Actions` pour gérer l'intégrati
 ![](/assets/support.png)
 
 *Groupe d'échange discord* : 
+
 ![](/assets/discord.png)
 
 
