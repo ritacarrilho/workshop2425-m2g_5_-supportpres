@@ -25,13 +25,28 @@ class Application
     private ?int $age_rating = null;
 
     /**
+     * @var Collection<int, Logging>
+     */
+    #[ORM\OneToMany(targetEntity: Logging::class, mappedBy: 'app')]
+    private Collection $loggings;
+
+    /**
+     * @var Collection<int, Viewing>
+     */
+    #[ORM\OneToMany(targetEntity: Viewing::class, mappedBy: 'app')]
+    private Collection $viewings;
+
+    /**
      * @var Collection<int, Child>
      */
-    #[ORM\ManyToMany(targetEntity: Child::class, mappedBy: 'applications')]
+    #[ORM\ManyToMany(targetEntity: Child::class, inversedBy: 'applications')]
+    #[ORM\JoinTable(name: 'utilization')]
     private Collection $children;
 
     public function __construct()
     {
+        $this->loggings = new ArrayCollection();
+        $this->viewings = new ArrayCollection();
         $this->children = new ArrayCollection();
     }
 
@@ -77,6 +92,66 @@ class Application
     }
 
     /**
+     * @return Collection<int, Logging>
+     */
+    public function getLoggings(): Collection
+    {
+        return $this->loggings;
+    }
+
+    public function addLogging(Logging $logging): static
+    {
+        if (!$this->loggings->contains($logging)) {
+            $this->loggings->add($logging);
+            $logging->setApp($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLogging(Logging $logging): static
+    {
+        if ($this->loggings->removeElement($logging)) {
+            // set the owning side to null (unless already changed)
+            if ($logging->getApp() === $this) {
+                $logging->setApp(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Viewing>
+     */
+    public function getViewings(): Collection
+    {
+        return $this->viewings;
+    }
+
+    public function addViewing(Viewing $viewing): static
+    {
+        if (!$this->viewings->contains($viewing)) {
+            $this->viewings->add($viewing);
+            $viewing->setApp($this);
+        }
+
+        return $this;
+    }
+
+    public function removeViewing(Viewing $viewing): static
+    {
+        if ($this->viewings->removeElement($viewing)) {
+            // set the owning side to null (unless already changed)
+            if ($viewing->getApp() === $this) {
+                $viewing->setApp(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
      * @return Collection<int, Child>
      */
     public function getChildren(): Collection
@@ -88,7 +163,6 @@ class Application
     {
         if (!$this->children->contains($child)) {
             $this->children->add($child);
-            $child->addApplication($this);
         }
 
         return $this;
@@ -96,9 +170,7 @@ class Application
 
     public function removeChild(Child $child): static
     {
-        if ($this->children->removeElement($child)) {
-            $child->removeApplication($this);
-        }
+        $this->children->removeElement($child);
 
         return $this;
     }

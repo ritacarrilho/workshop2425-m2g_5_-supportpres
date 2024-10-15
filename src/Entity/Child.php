@@ -16,10 +16,10 @@ class Child
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $firstname = null;
 
     #[ORM\Column]
@@ -38,9 +38,24 @@ class Child
     #[ORM\OneToMany(targetEntity: Device::class, mappedBy: 'child_id')]
     private Collection $devices;
 
+    /**
+     * @var Collection<int, Viewing>
+     */
+    #[ORM\OneToMany(targetEntity: Viewing::class, mappedBy: 'child')]
+    private Collection $viewings;
+
+    /**
+     * @var Collection<int, Application>
+     */
+    #[ORM\ManyToMany(targetEntity: Application::class, mappedBy: 'children')]
+    #[ORM\JoinTable(name: 'utilization')]
+    private Collection $applications;
+
     public function __construct()
     {
         $this->devices = new ArrayCollection();
+        $this->viewings = new ArrayCollection();
+        $this->applications = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -133,6 +148,63 @@ class Child
             if ($device->getChildId() === $this) {
                 $device->setChildId(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Viewing>
+     */
+    public function getViewings(): Collection
+    {
+        return $this->viewings;
+    }
+
+    public function addViewing(Viewing $viewing): static
+    {
+        if (!$this->viewings->contains($viewing)) {
+            $this->viewings->add($viewing);
+            $viewing->setChild($this);
+        }
+
+        return $this;
+    }
+
+    public function removeViewing(Viewing $viewing): static
+    {
+        if ($this->viewings->removeElement($viewing)) {
+            // set the owning side to null (unless already changed)
+            if ($viewing->getChild() === $this) {
+                $viewing->setChild(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Application>
+     */
+    public function getApplications(): Collection
+    {
+        return $this->applications;
+    }
+
+    public function addApplication(Application $application): static
+    {
+        if (!$this->applications->contains($application)) {
+            $this->applications->add($application);
+            $application->addChild($this);
+        }
+
+        return $this;
+    }
+
+    public function removeApplication(Application $application): static
+    {
+        if ($this->applications->removeElement($application)) {
+            $application->removeChild($this);
         }
 
         return $this;

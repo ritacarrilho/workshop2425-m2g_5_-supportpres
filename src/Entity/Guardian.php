@@ -15,16 +15,16 @@ class Guardian
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $email = null;
 
-    #[ORM\Column(length: 9, nullable: true)]
+    #[ORM\Column(length: 200, nullable: true)]
     private ?string $phone = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 200)]
@@ -33,7 +33,7 @@ class Guardian
     #[ORM\Column(nullable: true)]
     private ?int $gender = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 200)]
     private ?string $lang = null;
 
     /**
