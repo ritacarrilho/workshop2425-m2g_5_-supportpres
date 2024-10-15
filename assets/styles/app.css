@@ -3,9 +3,28 @@
     --black: #000000;
     --light_pink: #FFE9FF;
     --dark_pink: #FF84FC;
-    --blue_green: #D1E9E5;
-  }
+    --light_blue_green: #D1E9E5;
+    --dark_blue_green: #4FCFBD;
+    --light_yellow: #FFF4E7;
+    --dark_grey: #1C1C1C;
+    --light_brown: #F4EDE4;
+}
   
-  body {
-    background-color: skyblue;
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--dark_grey);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--green)
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark_grey);
 }
