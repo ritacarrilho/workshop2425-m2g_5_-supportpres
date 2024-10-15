@@ -26,6 +26,11 @@ Parent Watch est une application de surveillance dédiée aux parents, leur perm
 - PHP 8.1 ou supérieur
 - Base de données [MySQL](https://www.mysql.com/fr/)
 
+## Modélisation de la base de donnée
+![](/assets/mcd.png)
+![](/assets/mld.png)
+![](/assets/mld-textuel.png)
+
 ## Installation
 ### 1. Cloner le dépôt
 ```php
