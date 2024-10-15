@@ -1,3 +1,11 @@
-body {
+:root {
+    --green: #78937A;
+    --black: #000000;
+    --light_pink: #FFE9FF;
+    --dark_pink: #FF84FC;
+    --blue_green: #D1E9E5;
+  }
+  
+  body {
     background-color: skyblue;
 }
