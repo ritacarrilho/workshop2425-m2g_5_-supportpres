@@ -66,7 +66,16 @@ Ce projet utilise PHPUnit pour les tests unitaires. Pour exécuter les tests, la
 ```php
 php bin/phpunit
 ```
-## Intégration continue
+## Déploiement
+```php
+// Assurez-vous que les dépendances sont installées en production 
+composer install --no-dev --optimize-autoloader
+// Exécutez les migrations de base de données
+php bin/console doctrine:migrations:migrate --no-interaction --env=prod
+// Mettez à jour le cache en production 
+php bin/console cache:clear --env=prod
+```
+## Workflow Github
 Le projet **Parent Watch** utilise les `GitHub Actions` pour gérer l'intégration continue et le déploiement continu. Voici un aperçu du pipeline CI/CD et de la gestion des branches :
 
 ### 1. Gestion des branches :
@@ -87,15 +96,7 @@ Le projet **Parent Watch** utilise les `GitHub Actions` pour gérer l'intégrati
 - **En cas d'échec** : Si le pipeline CI/CD échoue, une notification détaillée est envoyée dans le **support Discord** pour alerter l'équipe de l'erreur.
 ![](/assets/support.png)
 
-## Déploiement
-```php
-// Assurez-vous que les dépendances sont installées en production 
-composer install --no-dev --optimize-autoloader
-// Exécutez les migrations de base de données
-php bin/console doctrine:migrations:migrate --no-interaction --env=prod
-// Mettez à jour le cache en production 
-php bin/console cache:clear --env=prod
-```
-
+*Groupe d'échange discord* : 
+![](/assets/discord.png)
 
 
