@@ -1,15 +1,32 @@
 {% include 'base.html.twig' %}
 
-<nav class="">
-    <div class="">
-        <a><img href=""> <img src="{{ asset('banner-logo.jpg') }}" alt="twitter"> </a>    
-    </div>
-    <div>
-        <ul>
-            <li><a href="{{ path('app_home') }}">A propos</a></li>
-            <li><a href="{{ path('app_home') }}">Services</a></li>
-            <li><a href="{{ path('app_home') }}">Prix</a></li>
-        </ul>
-        <a href="{{ path('app_home') }}">Se connecter</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <!-- Logo Section -->
+        <a class="navbar-brand" href="{{ path('app_home') }}">
+            <img src="{{ asset('banner-logo.png') }}" alt="ParentWatcher Logo" style="height: 70px;">
+        </a>
+        
+        <!-- Responsive Toggle Button (for mobile views) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_home') }}">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_home') }}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_home') }}">Prix</a>
+                </li>
+            </ul>
+            <!-- Login Button -->
+            <a class="btn rounded-pill button-green" href="{{ path('app_home') }}">Se connecter</a>
+        </div>
     </div>
 </nav>

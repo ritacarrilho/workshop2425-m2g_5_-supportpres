@@ -1,32 +1,45 @@
 
 </body>
 <!-- Footer -->
-<footer class="footer">
-    <div class="">
-        <div class="">
-            <p>Email me at</p>
-            <p>contact@website.com</p>
-        </div>
-        <div>
-            <h3>On en parle !</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna morbi massa dictum tristique convallis pretium eleifend habitant. Libero a arcu purus, elit, volutpat in nunc amet. Fermentum risus vel dolor id scelerisque senectus et, id nunc. Consectetur metus tristique ullamcorper semper purus massa eget urna.</p>
-            <div class="">
-                <a href="www.x.com"> <img src="{{ asset('twitter.svg') }}" alt="twitter"></a>
-                <a href="www.linkedin.com"> <img src="{{ asset('linkedin.svg') }}" alt="linkedin"></a>
-                <a href="www.instagram.com"> <img src="{{ asset('instagram.svg') }}" alt="instagram"> </a>
+<footer class="footer py-5" style="color: #1C1C1C; padding-bottom: 60px;">
+    <div class="container">
+        <div class="row mb-5">
+            <!-- Left Column: Contact Info -->
+            <div class="col-md-4">
+                <p>Email me at</p>
+                <p class="fw-bold">contact@website.com</p>
+            </div>
+
+            <!-- Right Column: Social and Description -->
+            <div class="col-md-8">
+                <h3 class="fw-bold">On en parle !</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna morbi massa dictum tristique convallis pretium eleifend habitant. Libero a arcu purus, elit, volutpat in nunc amet. Fermentum risus vel dolor id scelerisque senectus et, id nunc. Consectetur metus tristique ullamcorper semper purus massa eget urna.</p>
+                <div class="d-flex align-items-center">
+                    <a href="https://www.twitter.com" class="me-5">
+                        <img src="{{ asset('twitter.svg') }}" alt="Twitter" style="width: 30px;">
+                    </a>
+                    <a href="https://www.linkedin.com" class="me-5">
+                        <img src="{{ asset('linkedin.svg') }}" alt="LinkedIn" style="width: 30px;">
+                    </a>
+                    <a href="https://www.instagram.com" >
+                        <img src="{{ asset('instagram.svg') }}" alt="Instagram" style="width: 30px;">
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <div class="">
-        <div class="">                
-            <a href="{{ path('app_home') }}">A propos</a>
-            <a href="{{ path('app_home') }}">Services</a>
-            <a href="{{ path('app_home') }}">Prix</a>
-            <a href="{{ path('app_home') }}">Contactez nous</a>
-        </div>
-        <div class="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <hr style="width: 100%">
+
+        <div class="row pt-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <a href="{{ path('app_home') }}" class="me-4">A propos</a>
+                <a href="{{ path('app_home') }}" class="me-4">Services</a>
+                <a href="{{ path('app_home') }}" class="me-4">Prix</a>
+                <a href="{{ path('app_home') }}" class="me-4">Contactez nous</a>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
         </div>
     </div>
 </footer>

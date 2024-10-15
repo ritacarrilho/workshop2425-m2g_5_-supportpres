@@ -9,6 +9,7 @@
     --dark_grey: #1C1C1C;
     --light_grey: #696969;
     --light_brown: #F4EDE4;
+    --border-radius: 50px;
 }
   
 body {
@@ -20,9 +21,14 @@ body {
     color: var(--dark_grey);
 }
 
+section {
+    margin-top: 50px;
+}
+
 .footer {
     width: 100%;
-    background-color: var(--green)
+    background-color: var(--green);
+    color: var(--dark_grey)
 }
 
 a {
@@ -32,4 +38,53 @@ a {
 
 ul {
     list-style: none outside none;
+}
+
+hr {
+    height: 1px;        
+    width: 80%;        
+    background-color: var(--black); 
+    border: none;     
+    margin: 20px auto; 
+    opacity: 100;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.button-pink {
+    color: white;
+    background-color: var(--dark_pink);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.button-green {
+    color: white;
+    background-color: var(--green);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.button-pink:hover {
+    background-color: none;
+    color: var(--dark_grey);
+    border-color: var(--dark_pink);
+}
+
+.button-green:hover {
+    background-color: none;
+    color: var(--dark_grey);
+    border-color: var(--green);
+}
+
+.green-card {
+    background-color: var(--green);
+}
+
+.pink-card {
+    background-color: var(--dark_pink);
 }
