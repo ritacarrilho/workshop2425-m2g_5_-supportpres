@@ -162,3 +162,14 @@ h2 {
     border-radius: var(--border-radius);
     border: none;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: none; 
+    border-radius: 50%;      
+    width: 25px;             
+    height: 25px;    
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    position: absolute;
+    margin-top: 0px;
+}

@@ -1,3 +1,147 @@
 {% include 'header/header_connected.html.twig' %}
 
+<section class="container my-5" style="min-height: 650px;">
+    <h2 class="fw-bold" style="padding-bottom: 10px;">Statistiques</h2>
+
+    <div class="row">
+        <!-- Left Column: Actions and Child Selection -->
+        <div class="col-md-4" style="padding-right: 40px;">
+            <p style="padding-bottom: 10px;">ParentWatcher est là pour t’aider!</p>
+
+            <!-- PDF Report Card -->
+            <div class="card mb-4 p-3 d-flex flex-row justify-content-center align-items-center" style="background-color: #F4C6F3; gap: 35px; border-radius: 20px;">
+                <div>
+                    <h5 class="mb-1">Rapport en PDF</h5>
+                    <p class="mb-0">"Korem ipsum dolor sit..."</p>
+                </div>
+                <a href=""><img class="" src="{{ asset('download.svg') }}"></a>
+            </div>
+
+            <!-- Child Selection -->
+            <h5 class="fw-bold" style="padding-top: 25px; padding-bottom: 15px;">Enfant sélectionné :</h5>
+            <div class="card mb-3 p-3 d-flex flex-row justify-content-center align-items-center" style="background-color: #9AC9C1; border-radius: 20px;">
+                <div class="d-flex align-items-center" style="gap:25px;">
+                    <input type="checkbox" class="form-check-input me-2" checked>
+                    <h6 class="mb-0">TOURAILLE Sofia</h6>
+                    <p class="mb-0 text-muted" style="font-size: 12px">13 ANS</p>
+                </div>
+            </div>
+            <button class="btn w-100 mb-3" style="margin-top: 15px; margin-bottom: 35px; background-color: #D3CFCF; border-radius: 20px; font-size:15px; height: 50px">+ Ajouter un enfant</button>
+
+            <!-- Icons Section -->
+            <div class="d-flex justify-content-between mt-3">
+                <img src="{{ asset('icon1.svg') }}" alt="Icon 1" class="img-fluid" style="max-width: 27%;">
+                <img src="{{ asset('icon2.png') }}" alt="Icon 2" class="img-fluid" style="max-width: 27%;">
+                <img src="{{ asset('bell_image.svg') }}" alt="Icon 3" class="img-fluid" style="max-width: 27%">
+            </div>
+        </div>
+
+        <!-- Middle Column: Main Content and Image -->
+        <div class="col-md-4 text-center position-relative" style="border-left: 3px solid #ddd; border-right: 3px solid #ddd;">
+            <div class="d-flex flex-row justify-content-center align-items-center">
+                <h3 class="mb-0">Nb. signalement 9</h3>
+                <img src="{{ asset('arrow.svg') }}" style="max-width: 35px;" class="ms-2">
+            </div>
+            <div id="imageCarousel" class="carousel slide my-3">
+                <div class="carousel-inner" style="width: 80%; margin: 0 auto; height: auto; background-color: #f9f9f9; border-radius: 20px;">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('twitter_post.jpg') }}" alt="Image 1" class="img-fluid" style="height: 100%; border-radius: 20px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('insta_post.jpg') }}" alt="Image 2" class="img-fluid" style="height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Column: Network Blocking and Usage Time -->
+        <div class="col-md-4" style="padding-left: 40px;">
+            <h5 class="fw-bold" style="font-size: 25px; padding-bottom: 20px;">Bloquer les réseaux !</h5>
+            <div class="d-flex flex-row flex-wrap justify-content-between">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ asset('instagram_color.svg') }}" alt="Instagram" class="me-2" style="width: 40px;">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" style="width: 50px; height: 25px;">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ asset('twitter_color.svg') }}" alt="X" class="me-2" style="width: 40px;">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" style="width: 50px; height: 25px;">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ asset('whatsapp_color.svg') }}" alt="WhatsApp" class="me-2" style="width: 40px;">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" style="width: 50px; height: 25px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time Usage Section -->
+            <h5 class="fw-bold mt-4" style="font-size: 25px; padding-top: 25px; padding-bottom: 20px">Temps d’utilisation !</h5>
+            <div id="dayCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="text-center mb-3">
+                            <div class="d-flex justify-content-center align-items-center mb-2">
+                                <button class="carousel-control-prev me-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="prev" style="position: static;">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <h5 class="mb-0">Lundi</h5>
+                                <button class="carousel-control-next ms-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="next" style="position: static;">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <img src="{{ asset('graph_3.png') }}" alt="Pie Chart Lundi" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center mb-3">
+                            <div class="d-flex justify-content-center align-items-center mb-2">
+                                <button class="carousel-control-prev me-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="prev" style="position: static;">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <h5 class="mb-0">Mardi</h5>
+                                <button class="carousel-control-next ms-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="next" style="position: static;">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <img src="{{ asset('graph_1.png') }}" alt="Pie Chart Mardi" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="text-center mb-3">
+                            <div class="d-flex justify-content-center align-items-center mb-2">
+                                <button class="carousel-control-prev me-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="prev" style="position: static;">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <h5 class="mb-0">Mercredi</h5>
+                                <button class="carousel-control-next ms-2" type="button" data-bs-target="#dayCarousel" data-bs-slide="next" style="position: static;">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <img src="{{ asset('graph_2.png') }}" alt="Pie Chart Mercredi" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% include 'footer/footer.html.twig' %}
