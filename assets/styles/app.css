@@ -3,12 +3,15 @@
     --black: #000000;
     --light_pink: #FFE9FF;
     --dark_pink: #FF84FC;
+    --medium_pink: #F4C6F3;
     --light_blue_green: #D1E9E5;
     --dark_blue_green: #4FCFBD;
     --light_yellow: #FFF4E7;
     --dark_grey: #1C1C1C;
     --light_grey: #696969;
     --light_brown: #F4EDE4;
+    --medium_brown: #F9B25F;
+    --medium_blue_green: #9AC9C1;
     --border-radius: 50px;
 }
   
@@ -146,3 +149,16 @@ h2 {
     background: linear-gradient(#ffc6fe, #d5ffd5);
 } */
 
+.eye-background-green {
+    background-color: var(--medium_blue_green);
+    min-width: 100px;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.eye-background-pink {
+    background-color: var(--medium_pink);
+    min-width: 100px;
+    border-radius: var(--border-radius);
+    border: none;
+}

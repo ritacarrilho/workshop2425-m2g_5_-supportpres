@@ -1,1 +1,97 @@
-<h1>Hello mon super dash</h1>
+{% include 'header/header_connected.html.twig' %}
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="fw-bold" style="padding-bottom: 10px;">Salut Cécilia !</h2>
+            <p style="padding-bottom: 10px;">ParentWatcher est là pour t’aider!</p>
+
+            <div class="mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="background-color: #D1E9E5; border-radius: 20px;">
+                <img src="{{ asset('icon1.svg') }}" alt="Icon" style="">
+                <div class="d-flex flex-column align-items-center" style="min-width: 40%">
+                    <h5 class="mb-0" style="padding-bottom: 20px; font-weight: 700">Mes actus</h5>
+                    <div class="eye-background-green" style="text-align: center">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                    </div>
+                    <p class="mt-2" style="font-size: 13px">OUVRIR</p>
+                </div>
+            </div>
+
+            <div class="mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="background-color: #FFE9FF; border-radius: 20px;">
+                <div class="d-flex flex-column align-items-center" style="min-width: 40%">
+                    <h5 class="mb-0" style="padding-bottom: 10px; font-weight: 700">Voir les statistiques</h5>
+                    <p style="text-align: center;">“Korem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="eye-background-pink" style="text-align: center">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                    </div>
+                    <p class="mt-2" style="font-size: 13px;">OUVRIR</p>
+                </div>
+                <img src="{{ asset('icon2.png') }}" alt="Icon" style="">
+            </div>
+
+            <div class="mb-4 p-3 d-flex flex-row align-items-center justify-content-between" style="background-color: #D1E9E5; border-radius: 20px;">
+                <div class="d-flex flex-column align-items-center" style="min-width: 40%">
+                    <h5 class="mb-0" style="padding-bottom: 10px; font-weight: 700">Les infos de mon enfant</h5>
+                    <p class="mt-2">"ma fiche s’appelle ..."</p>
+                    <div class="eye-background-green" style="text-align: center">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                    </div>
+                    <p class="mt-2" style="font-size: 13px">OUVRIR</p>
+                </div>
+                <img src="{{ asset('icon3.svg') }}" alt="Icon" style="">
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <h3 class="fw-bold">Vérifie les apps !</h3>
+            <div class="my-3" style="padding-top: 20px;">
+                <img src="{{ asset('instagram_color.svg') }}" alt="Instagram" class="mx-2" style="width: 30px;">
+                <img src="{{ asset('whatsapp_color.svg') }}" alt="WhatsApp" class="mx-2" style="width: 30px;">
+                <img src="{{ asset('twitter_color.svg') }}" alt="X" class="mx-2" style="width: 30px;">
+            </div>
+            <div class="card mx-auto" style="width: 80%; height: auto; margin-top: 20px;">
+                <img src="{{ asset('dashboard_image.png') }}" alt="Placeholder Image" class="img-fluid" style="height: 100%; object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="fw-bold" style="padding-bottom: 20px;">Les statistiques clés !</h3>
+            <div class="row">
+                <div class="col-6 mb-4">
+                    <div class="card p-3" style="background-color: #D1E9E5; border-radius: 20px;">
+                        <h5 class="mb-1" style="padding-bottom: 10px;">Instagram</h5>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">30 %</b> d'utilisation quotidienne</p>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">40 %</b> de vidéos dépressive</p>
+                        <p class="text-muted" style="font-size: 13px;">11 Mai 2023</p>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="card p-3" style="background-color: #FFE9FF; border-radius: 20px;">
+                        <h5 class="mb-1" style="padding-bottom: 10px;">Tik tok</h5>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">30 %</b> d'utilisation quotidienne</p>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">40 %</b> de vidéos dépressive</p>
+                        <p class="text-muted" style="font-size: 13px;">25 Mai 2023</p>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="card p-3" style="background-color: #F4EDE4; border-radius: 20px;">
+                        <h5 class="mb-1" style="padding-bottom: 10px;">What's app</h5>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">30 %</b> d'utilisation quotidienne</p>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">40 %</b> de vidéos dépressive</p>
+                        <p class="text-muted" style="font-size: 13px;">10 Février 2023</p>
+                    </div>
+                </div>
+                <div class="col-6 mb-4">
+                    <div class="card p-3" style="background-color: #D1E9E5; border-radius: 20px;">
+                        <h5 class="mb-1" style="padding-bottom: 10px;">Twitter</h5>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">30 %</b> d'utilisation quotidienne</p>
+                        <p class="mb-1" style="padding-bottom: 10px;"><b style="font-weight: 700">40 %</b> de vidéos dépressive</p>
+                        <p class="text-muted" style="font-size: 13px;">09 Juillet 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer/footer.html.twig' %}
