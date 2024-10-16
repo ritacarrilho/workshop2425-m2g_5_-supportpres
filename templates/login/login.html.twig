@@ -1,19 +1,21 @@
 {% include 'header/header.html.twig' %}
-<div class="container d-flex align-items-center justify-content-center min-vh-100" style="margin-top: -80px;">
-    <div class="bg-white" style="width: 400px;">
-        <h2 class="text-center mb-5">SE CONNECTER</h2>
-        <form>
-            <div class="form-group mb-4">
-                <input type="text" class="form-control custom-input" style="width: 450px" id="username" placeholder="Identifiant" required>
-            </div>
-            <div class="form-group mb-2">
-                <input type="password" class="form-control custom-input" style="width: 450px" id="password" placeholder="Mot de passe" required> 
-            </div>
-            <div class="text-right">
-                <a href="#" class="text-muted">Mot de passe oublié ?</a>
-            </div>
-            <button type="submit" class="button-black mt-5" style="width: 450px;height: 48px;">CONNEXION</button>
-        </form>
+<body style="background: linear-gradient(#ffefff, #d5ffd5);">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100 background-login" style="margin-top: -80px;">
+        <div class="" style="width: 400px;">
+            <h2 class="text-center mb-5">SE CONNECTER</h2>
+            <form>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control custom-input" style="width: 450px" id="username" placeholder="Identifiant" required>
+                </div>
+                <div class="form-group mb-2">
+                    <input type="password" class="form-control custom-input" style="width: 450px" id="password" placeholder="Mot de passe" required> 
+                </div>
+                <div class="text-right">
+                    <a href="#" class="text-muted">Mot de passe oublié ?</a>
+                </div>
+                <button type="submit" class="button-black mt-5" style="width: 450px;height: 48px;">CONNEXION</button>
+            </form>
+        </div>
     </div>
-</div>
+</body>
 {% include 'footer/footer.html.twig' %}
