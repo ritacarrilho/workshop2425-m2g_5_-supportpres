@@ -1,0 +1,103 @@
+{% include 'header/header_connected.html.twig' %}
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 p-3" style="background-color: #FFE9FF; border-radius: 20px; border: none">
+                <div class="d-flex align-items-center justify-content-evenly">
+                    <img src="{{ asset('avatar.svg') }}" alt="User Image" class="me-3" style="width: 100px; height: auto;">
+                    <div>
+                        <h4 class="mb-0">TOURAILLE Cécilia</h5>
+                        <p class="text-muted mb-0">35 ANS</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-evenly">
+                    <div class="mt-3">
+                        <button class="btn ms-auto">MODIFIER</button>
+                    </div>
+                    <div class="form-check mt-3" style="max-width: 40%;">
+                        <input type="checkbox" class="form-check-input" id="dataConsent">
+                        <label class="form-check-label" for="dataConsent">J'autorise l'utilisation de mes données</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 p-3" style="background-color: #e0f2f1; border-radius: 40px; border: none">
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('email.svg') }}" class="me-3">
+                    <span>cecilia.touraille@gmail.com</span>
+                    <button class="btn btn-sm ms-auto">MODIFIER</button>
+                </div>
+            </div>
+            <div class="card mb-3 p-3" style="background-color: #FFE9FF; border-radius: 40px; border: none">
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('phone.svg') }}" class="me-3">
+                    <span>06 27 95 96 97</span>
+                    <button class="btn btn-sm ms-auto">MODIFIER</button>
+                </div>
+            </div>
+            <div class="card mb-3 p-3" style="background-color: #fff3e0; border-radius: 40px; border: none">
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('birthday.svg') }}" class="me-3">
+                    <span>11 Mai 1980</span>
+                    <button class="btn btn-sm ms-auto">MODIFIER</button>
+                </div>
+            </div>
+            <div class="card mb-3 p-3" style="background-color: #e3f2fd; border-radius: 40px; border: none">
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('location.svg') }}" class="me-3">
+                    <span>13 Rue Jules Verne</span>
+                    <button class="btn btn-sm ms-auto">MODIFIER</button>
+                </div>
+            </div>
+            <div class="card mb-3 p-3" style="background-color: #f1f8e9; border-radius: 40px; border: none">
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('password.svg') }}" class="me-3">
+                    <span>Changer de mot de passe</span>
+                    <button class="btn btn-sm ms-auto">MODIFIER</button>
+                </div>
+            </div>
+
+            <div class="p-3 row justify-content-between" style="background-color: #fce4ec; border-radius: 40px; border: none">
+                <div class="col-md-8">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="smsNotification">
+                        <label class="form-check-label" for="smsNotification">Je souhaite recevoir des SMS</label>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" class="form-check-input" id="emailNotification">
+                        <label class="form-check-label" for="emailNotification">Je souhaite recevoir des mails</label>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input type="checkbox" class="form-check-input" id="popupNotification">
+                        <label class="form-check-label" for="popupNotification">Je souhaite recevoir les notifications 'pop-up' sur mon téléphone</label>
+                    </div>
+                </div>
+                <img src="{{ asset('bell_image.svg') }}" alt="Notifications" class="mt-3 img-fluid" style="max-width: 33%;">
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h3 class="fw-bold" style="padding-bottom: 20px">Mes enfants suivis !</h3>
+            <p style="padding-bottom: 20px">ParentWatcher est là pour t’aider!</p>
+            <div class="row" style="padding-bottom: 20px">
+                <div class="col-md-4 mb-4" style="cursor: pointer;">
+                    <img src="{{ asset('kid_id.jpg') }}" alt="Child Image" class="img-fluid" style="border: none; height: 180px; border-radius: 20px; width: 100%; object-fit: cover;"></a>
+                </div>
+                {% for i in 1..5 %}
+                    <div class="col-md-4 mb-4" style="cursor: pointer;">
+                        <div class="card d-flex align-items-center justify-content-center" style="background-color: #f9f9f9; border-radius: 20px; border: 1px solid grey; height: 180px; position: relative;">
+                            <img src="{{ asset('add.svg') }}">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn button-pink">Ajouter un enfant</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'footer/footer.html.twig' %}

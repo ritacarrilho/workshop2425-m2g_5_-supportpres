@@ -88,3 +88,13 @@ h2 {
 .pink-card {
     background-color: var(--dark_pink);
 }
+
+.form-check-input:checked {
+    background-color: black;
+    border-color: black;
+}
+
+.form-check-input {
+    background-color: black;
+    border-color: black;
+}
