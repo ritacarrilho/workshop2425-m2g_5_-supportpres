@@ -1,11 +1,11 @@
 
 {% include 'header/header.html.twig' %}
 
-<section class="container py-5" style="min-height: 60vh; padding-bottom: 60px;">
+<section class="container py-5" style="min-height: 60vh; padding-bottom: 60px;" id="about">
     <div class="row align-items-center">
         <div class="col-md-6">
             <h2 class="fw-bold display-4">Salut, Je suis ParentWatcher.<br>On aide à gerer les apps de vos enfants</h2>
-            <p class="mt-3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+            <p class="mt-3 mb-4">Parent Watcher vous permet de connecter les réseaux sociaux de vos enfants pour surveiller leur activité en ligne. Grâce à nos algorithmes de détection, nous vous alertons lorsqu'un contenu inapproprié ou interdit aux mineurs est consulté, ou si des mentions négatives apparaissent sur leurs comptes.</p>
             <a href="{{ path('app_home') }}" class="btn btn-pink btn-lg rounded-pill button-pink">Crée un compte</a>
         </div>
         <div class="col-md-6 text-end">
@@ -14,14 +14,14 @@
     </div>
 </section>
 
-<section class="container my-5" style="min-height: 60vh; padding-bottom: 60px;">
+<section class="container my-5" style="min-height: 60vh; padding-bottom: 60px;" id="services">
     <h2 class="text-center mb-5">Services</h2>
     <div class="row">
         <div class="col-md-3 mb-4">
             <div class="card border-0 text-center h-100 d-flex align-items-center justify-content-center" style="min-height: 350px;">
                 <div class="card-body d-flex flex-column justify-content-center gap-3 pink-card" style="border-radius: 20px;">
                     <h5 class="card-title">Instagram</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+                    <p class="card-text">Suivez l'activité de votre enfant sur Instagram. Recevez des alertes en cas de publication ou consultation de contenu sensible ou inapproprié.</p>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
             <div class="card border-0 text-center h-100 d-flex align-items-center justify-content-center" style="min-height: 250px;">
                 <div class="card-body d-flex flex-column justify-content-center gap-3 green-card" style="border-radius: 20px;">
                     <h5 class="card-title">Reddit</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+                    <p class="card-text">Surveillez les discussions et interactions sur Reddit. Nos algorithmes détectent les mentions négatives ou les discussions inappropriées pour protéger vos enfants.</p>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
             <div class="card border-0 text-center h-100 d-flex align-items-center justify-content-center" style="min-height: 250px; border-radius: 20px;">
                 <div class="card-body d-flex flex-column justify-content-center gap-3 pink-card" style="border-radius: 20px;">
                     <h5 class="card-title">Facebook</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+                    <p class="card-text">Protégez vos enfants des dangers sur Facebook en recevant des notifications lorsque du contenu dangereux ou inapproprié est détecté sur leur fil d'actualité.</p>
                 </div>
             </div>
         </div>
@@ -45,14 +45,14 @@
             <div class="card border-0 text-center h-100 d-flex align-items-center justify-content-center" style="min-height: 250px;">
                 <div class="card-body d-flex flex-column justify-content-center gap-3 green-card" style="border-radius: 20px;">
                     <h5 class="card-title">Twitter</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+                    <p class="card-text">Avec Parent Watcher, gardez un œil sur les tweets de vos enfants et leurs mentions. Nous vous envoyons des alertes en cas de contenu inadapté ou de comportements inquiétants.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="container my-5" style="padding-bottom: 60px;">
+<section class="container my-5" style="padding-bottom: 60px;" id="pricing">
     <h2 class="text-center mb-5">Nos tarifs & solutions</h2>
     <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
@@ -86,11 +86,11 @@
     <div class="row">
         <div class="col-md-6 mb-4">
             <div class="card p-4" style="background-color: #f1f1f1; border-radius: 10px;">
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.”</p>
+                <p>"Parent Watcher a été une véritable révélation pour nous. Nous avons pu identifier des contenus sensibles sur le compte Instagram de notre fils avant que ça ne devienne un problème."</p>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('logo.png') }}" alt="Person Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
                     <div>
-                        <h5 class="mb-0">Lorem Ipsum</h5>
+                        <h5 class="mb-0">Marie D.</h5>
                         <p class="text-muted mb-0">Facebook</p>
                     </div>
                 </div>
@@ -98,11 +98,11 @@
         </div>
         <div class="col-md-6 mb-4">
             <div class="card p-4" style="background-color: #f1f1f1; border-radius: 10px;">
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.”</p>
+                <p>"Grâce à Parent Watcher, j'ai pu surveiller l'activité de mes enfants sur Twitter et intervenir rapidement quand des discussions inappropriées ont commencé à apparaître."</p>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('logo.png') }}" alt="Person Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
                     <div>
-                        <h5 class="mb-0">Lorem Ipsum</h5>
+                        <h5 class="mb-0">Jean B.</h5>
                         <p class="text-muted mb-0">Twitter</p>
                     </div>
                 </div>
@@ -110,24 +110,24 @@
         </div>
         <div class="col-md-6 mb-4">
             <div class="card p-4" style="background-color: #f1f1f1; border-radius: 10px;">
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.”</p>
+                <p>"Je ne savais pas à quel point Reddit pouvait être une plateforme risquée jusqu'à ce que Parent Watcher m'envoie une alerte. Maintenant, je me sens beaucoup plus serein."</p>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('logo.png') }}" alt="Person Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
                     <div>
-                        <h5 class="mb-0">Lorem Ipsum</h5>
-                        <p class="text-muted mb-0">Dribbble</p>
+                        <h5 class="mb-0">Luc M.</h5>
+                        <p class="text-muted mb-0">Reddit</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6 mb-4">
             <div class="card p-4" style="background-color: #f1f1f1; border-radius: 10px;">
-                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.”</p>
+                <p>"Grâce à Parent Watcher, je peux maintenant suivre ce que mes enfants consultent sur Facebook sans avoir à m'inquiéter. Les alertes sont précises et m'ont aidé à réagir rapidement."</p>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('logo.png') }}" alt="Person Image" class="rounded-circle me-3" style="width: 50px; height: 50px;">
                     <div>
-                        <h5 class="mb-0">Lorem Ipsum</h5>
-                        <p class="text-muted mb-0">Pinterest</p>
+                        <h5 class="mb-0">Claire F.</h5>
+                        <p class="text-muted mb-0">Facebook</p>
                     </div>
                 </div>
             </div>
@@ -141,9 +141,9 @@
     <div class="row align-items-center">
         <div class="col-md-6">
             <h2 class="fw-bold display-6">Salut, Je suis ParentWatcher.<br>On aide à gerer les apps de vos enfants</h2>
-            <p class="mt-3 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet amet tristique ipsum aliquam. Vulputate dolor, nunc phasellus vestibulum turpis posuere turpis eget vel.</p>
+            <p class="mt-3 mb-4">Parent Watcher est un outil conçu pour vous aider à surveiller les activités de vos enfants sur les réseaux sociaux. Connectez leurs comptes et recevez des alertes en cas de contenu inapproprié ou de mentions négatives.</p>
+            <p>Grâce à nos deux algorithmes, nous vous tenons informé des risques en ligne, qu'ils soient visuels ou textuels.
+                Découvrez comment Parent Watcher peut protéger vos enfants en ligne et vous donner plus de tranquillité d’esprit.</p>
             <a href="#" class="btn button-pink">Pour en savoir plus</a>
         </div>
 

@@ -98,3 +98,51 @@ h2 {
     background-color: black;
     border-color: black;
 }
+.button-black {
+    color: white; 
+    background-color: #1C1C1C; 
+    /* padding: 20px;  */
+    border-radius: var(--border-radius); 
+    text-align: center; 
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.button-black:hover {
+    background-color: #1C1C1C; 
+    color: white; 
+}
+
+
+.text-large {
+    font-size: 32px; 
+}
+
+.text-small{
+    font-size: 12px; 
+}
+
+.custom-input {
+    background-color: var(--light-grey);
+    /* border: 1px solid var(--black); */
+    border-radius: 25px;
+    padding: 15px; 
+    font-size: 16px; 
+    transition: border-color 0.3s;
+}
+
+.custom-input:focus {
+    /* border-color: var(--black);  */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    outline: none; 
+}
+
+/* .background-login {
+    width: 1052.68px;
+    height: 731.06px;
+    top: 200.26px;
+    left: 198.32px;
+    background: linear-gradient(#ffc6fe, #d5ffd5);
+} */
+
