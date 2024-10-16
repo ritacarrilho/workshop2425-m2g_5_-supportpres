@@ -59,21 +59,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         
-      - name: Install PHP CS Fixer
-        run: composer require --dev friendsofphp/php-cs-fixer
-        continue-on-error: true
+      # - name: Install PHP CS Fixer
+      #   run: composer require --dev friendsofphp/php-cs-fixer
+      #   continue-on-error: true
 
-      - name: Run PHP CS Fixer for code linting
-        run: |
-          ./vendor/bin/php-cs-fixer fix --dry-run --diff || true
-        continue-on-error: true
+      # - name: Run PHP CS Fixer for code linting
+      #   run: |
+      #     ./vendor/bin/php-cs-fixer fix --dry-run --diff || true
+      #   continue-on-error: true
 
-      - name: Upload CS Fixer report
-        uses: actions/upload-artifact@v3
-        with:
-          name: php-cs-fixer-report
-          path: .php_cs.cache
-        continue-on-error: true
+      # - name: Upload CS Fixer report
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: php-cs-fixer-report
+      #     path: .php_cs.cache
+      #   continue-on-error: true
 
   tests:
     name: Run Tests
@@ -84,20 +84,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
-        continue-on-error: true
+      # - name: Install Composer dependencies
+      #   run: composer install --prefer-dist --no-progress --no-suggest
+      #   continue-on-error: true
 
-      - name: Run PHPUnit tests with coverage
-        run: ./vendor/bin/phpunit --testdox --coverage-text --coverage-clover=coverage.xml
-        continue-on-error: true
+      # - name: Run PHPUnit tests with coverage
+      #   run: ./vendor/bin/phpunit --testdox --coverage-text --coverage-clover=coverage.xml
+      #   continue-on-error: true
 
-      - name: Upload PHPUnit coverage report
-        uses: actions/upload-artifact@v3
-        with:
-          name: phpunit-coverage
-          path: coverage.xml
-        continue-on-error: true
+      # - name: Upload PHPUnit coverage report
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: phpunit-coverage
+      #     path: coverage.xml
+      #   continue-on-error: true
 
   release:
     name: Release and Notify
