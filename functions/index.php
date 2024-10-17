@@ -1,5 +1,7 @@
 <?php
 
+error_log('Netlify function is executing');
+
 require __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Dotenv\Dotenv;
