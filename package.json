@@ -5,9 +5,21 @@
     "author": "BILLARD Mélissa, BRACCIALE-COMBAS Lola, CARRILHO LAMEIRA Rita, COURTIN Amandine",
     "license": "X",
     "devDependencies": {
+        "@symfony/webpack-encore": "^5.0.1",
         "autoprefixer": "^10.4.20",
+        "core-js": "^3.38.1",
         "postcss": "^8.4.47",
         "postcss-loader": "^8.1.1",
-        "tailwindcss": "^3.4.13"
+        "regenerator-runtime": "^0.14.1",
+        "tailwindcss": "^3.4.13",
+        "webpack-notifier": "^1.15.0"
+    },
+    "scripts": {
+        "dev": "encore dev",
+        "build": "encore production"
+    },
+    "dependencies": {
+        "webpack": "^5.95.0",
+        "webpack-cli": "^5.1.4"
     }
 }
