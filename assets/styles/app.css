@@ -173,3 +173,12 @@ h2 {
     position: absolute;
     margin-top: 0px;
 }
+
+.blurred-image {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out; 
+}
+
+.blurred-image:hover {
+    filter: none;
+}

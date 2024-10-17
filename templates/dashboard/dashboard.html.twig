@@ -11,7 +11,7 @@
                 <div class="d-flex flex-column align-items-center" style="min-width: 40%">
                     <h5 class="mb-0" style="padding-bottom: 20px; font-weight: 700">Mes actus</h5>
                     <div class="eye-background-green" style="text-align: center">
-                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px;">
                     </div>
                     <p class="mt-2" style="font-size: 13px">OUVRIR</p>
                 </div>
@@ -22,9 +22,9 @@
                     <h5 class="mb-0" style="padding-bottom: 10px; font-weight: 700">Voir les statistiques</h5>
                     <p style="text-align: center;">“Korem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="eye-background-pink" style="text-align: center">
-                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px;">
                     </div>
-                    <p class="mt-2" style="font-size: 13px;">OUVRIR</p>
+                    <p class="mt-2" style="font-size: 13px;"><a href="{{ path('app_statistic') }}">OUVRIR</span></p>
                 </div>
                 <img src="{{ asset('icon2.png') }}" alt="Icon" style="">
             </div>
@@ -34,9 +34,9 @@
                     <h5 class="mb-0" style="padding-bottom: 10px; font-weight: 700">Les infos de mon enfant</h5>
                     <p class="mt-2">"ma fiche s’appelle ..."</p>
                     <div class="eye-background-green" style="text-align: center">
-                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px; cursor: pointer;">
+                        <img src="{{ asset('eyes.svg') }}" alt="Eye Icon" style="width: 50px;">
                     </div>
-                    <p class="mt-2" style="font-size: 13px">OUVRIR</p>
+                    <p class="mt-2" style="font-size: 13px"><a href="{{ path('app_dashboard_info') }}">OUVRIR</a></p>
                 </div>
                 <img src="{{ asset('icon3.svg') }}" alt="Icon" style="">
             </div>
