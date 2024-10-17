@@ -93,12 +93,12 @@ h2 {
 }
 
 .form-check-input:checked {
-    background-color: black;
+    /* background-color: black; */
     border-color: black;
 }
 
 .form-check-input {
-    background-color: black;
+    /* background-color: black; */
     border-color: black;
 }
 .button-black {
@@ -181,4 +181,18 @@ h2 {
 
 .blurred-image:hover {
     filter: none;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--green);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+    font-size: 18px;
 }
